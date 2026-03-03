@@ -18,18 +18,18 @@
         window.openLebensmittelMenu = function () {
             window.clearSearchDivButtons();
             window.insertButtonInSearchDiv("btnGewaechshaus", "https://game.logistics-empire.com/assets/res_tomatoes-DB5E8JLB.avif", () => window.applyBuildingFilter("Gewächshaus"), "Gewächshaus");
-            window.insertButtonInSearchDiv("btnTomaten", "https://game.logistics-empire.com/assets/res_ketchup-Leaw1pbo.avif", () => window.applyBuildingFilter("Tomatenfabrik"), "Tomatenfabrik");
-            window.insertButtonInSearchDiv("btnGetreide", "https://game.logistics-empire.com/assets/res_wheat-BAv6FNtx.avif", () => window.applyBuildingFilter("Getreidefarm"), "Getreidefarm");
+            window.insertButtonInSearchDiv("btnTomaten", "https://game.logistics-empire.com/assets/res_ketchup-Leaw1pbo.avif", () => window.applyBuildingFilter("Tomatenfabrik"), "Tomaten");
+            window.insertButtonInSearchDiv("btnGetreide", "https://game.logistics-empire.com/assets/res_wheat-BAv6FNtx.avif", () => window.applyBuildingFilter("Getreidefarm"), "Getreide");
             window.insertButtonInSearchDiv("btnMuehle", "https://game.logistics-empire.com/assets/icon_bld_mill-DaJO0L1l.avif", () => window.applyBuildingFilter("Mühle"), "Mühle");
             window.insertButtonInSearchDiv("btnBaeckerei", "https://game.logistics-empire.com/assets/res_bread-CuVynabW.avif", () => window.applyBuildingFilter("Bäckerei"), "Bäckerei");
             window.insertButtonInSearchDiv("btnSnack", "https://game.logistics-empire.com/assets/res_potato_chips-C4SYE08S.avif", () => window.applyBuildingFilter("Snackmanufaktur"), "Snack");
-            window.insertButtonInSearchDiv("btnPommes", "https://game.logistics-empire.com/assets/res_fries-By8mac-R.avif", () => window.applyBuildingFilter("Pommesmanufaktur"), "Pommesmanufaktur");
+            window.insertButtonInSearchDiv("btnPommes", "https://game.logistics-empire.com/assets/res_fries-By8mac-R.avif", () => window.applyBuildingFilter("Pommesmanufaktur"), "Pommes");
     };
 
     window.openFleischMenu = function () {
         window.clearSearchDivButtons();
         window.insertButtonInSearchDiv("btnMetzgerei", "https://game.logistics-empire.com/assets/icon_bld_meat_factory-DeFS9SW1.avif", () => window.applyBuildingFilter("Metzgerei"), "Metzgerei");
-        window.insertButtonInSearchDiv("btnSchlachthof", "https://game.logistics-empire.com/assets/icon_bld_meat_factory-DeFS9SW1.avif", () => window.applyBuildingFilter("Fleischfabrik"), "Fleischfabrik");
+        window.insertButtonInSearchDiv("btnSchlachthof", "https://game.logistics-empire.com/assets/icon_bld_meat_factory-DeFS9SW1.avif", () => window.applyBuildingFilter("Fleischfabrik"), "Fleisch");
         window.insertButtonInSearchDiv("btnPizza", "https://game.logistics-empire.com/assets/icon_bld_bakery-jjxzNfJk.avif", () => window.applyBuildingFilter("Pizzamanufaktur"), "Pizza");
     };
 
@@ -42,17 +42,17 @@
 
     window.openKleidungMenu = function () {
         window.clearSearchDivButtons();
-        window.insertButtonInSearchDiv("btnKleidung", "https://game.logistics-empire.com/assets/res_indigo_clothes-JQr_V6yn.avif", () => window.applyBuildingFilter("Kleidungsfabrik"), "Kleidungsfabrik");
-        window.insertButtonInSearchDiv("btnHut", "https://game.logistics-empire.com/assets/icon_bld_hat_manufactory-B_YAS2fA.avif", () => window.applyBuildingFilter("Hutmanufaktur"), "Hutmanufaktur");
+        window.insertButtonInSearchDiv("btnKleidung", "https://game.logistics-empire.com/assets/res_indigo_clothes-JQr_V6yn.avif", () => window.applyBuildingFilter("Kleidungsfabrik"), "Kleidungs");
+        window.insertButtonInSearchDiv("btnHut", "https://game.logistics-empire.com/assets/icon_bld_hat_manufactory-B_YAS2fA.avif", () => window.applyBuildingFilter("Hutmanufaktur"), "Hüte");
     };
 
     window.openLagerMenu = function () {
         window.clearSearchDivButtons();
-        window.insertButtonInSearchDiv("btnLagerT", "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", () => window.applyBuildingFilter("Textillager"), "Textillager");
-        window.insertButtonInSearchDiv("btnLagerL", "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", () => window.applyBuildingFilter("Lebensmittellager"), "Lebensmittellager");
-        window.insertButtonInSearchDiv("btnLagerK", "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", () => window.applyBuildingFilter("Kartoffellager"), "Kartoffellager");
-        window.insertButtonInSearchDiv("btnLagerKl", "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", () => window.applyBuildingFilter("Kleidungslager"), "Kleidungslager");
-        window.insertButtonInSearchDiv("btnLagerH", "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", () => window.applyBuildingFilter("Hutlager"), "Hutlager");
+        window.insertButtonInSearchDiv("btnLagerT", "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", () => window.applyBuildingFilter("Textillager"), "Textil");
+        window.insertButtonInSearchDiv("btnLagerL", "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", () => window.applyBuildingFilter("Lebensmittellager"), "Lebensmittel");
+        window.insertButtonInSearchDiv("btnLagerK", "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", () => window.applyBuildingFilter("Kartoffellager"), "Kartoffel");
+        window.insertButtonInSearchDiv("btnLagerKl", "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", () => window.applyBuildingFilter("Kleidungslager"), "Kleidungs");
+        window.insertButtonInSearchDiv("btnLagerH", "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", () => window.applyBuildingFilter("Hutlager"), "Hüte");
     };
 
     // =============================================================
@@ -102,11 +102,11 @@
 
     // Initialisierung der Header-Buttons (ohne den alten Toggle-Button)
     window.initHeaderButtons([
-        { id: "headAcker",  icon: "https://game.logistics-empire.com/assets/res_tomatoes-DB5E8JLB.avif", onClick: window.openLebensmittelMenu, tooltip: "Ackerbau & Snacks" },
-        { id: "headFleisch", icon: "https://game.logistics-empire.com/assets/icon_bld_meat_factory-DeFS9SW1.avif", onClick: window.openFleischMenu, tooltip: "Fleisch & Pizza" },
-        { id: "headStoffe", icon: "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", onClick: window.openStoffeMenu, tooltip: "Stoffe & Garne" },
-        { id: "headKleid",  icon: "https://game.logistics-empire.com/assets/res_indigo_clothes-JQr_V6yn.avif", onClick: window.openKleidungMenu, tooltip: "Kleidung & Hüte" },
-        { id: "headLagerM", icon: "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", onClick: window.openLagerMenu, tooltip: "Lager Menü" },
+        { id: "headAcker",  icon: "https://game.logistics-empire.com/assets/res_tomatoes-DB5E8JLB.avif", onClick: window.openLebensmittelMenu, tooltip: "Ackerbau" },
+        { id: "headFleisch", icon: "https://game.logistics-empire.com/assets/icon_bld_meat_factory-DeFS9SW1.avif", onClick: window.openFleischMenu, tooltip: "Fleisch" },
+        { id: "headStoffe", icon: "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", onClick: window.openStoffeMenu, tooltip: "Stoffe" },
+        { id: "headKleid",  icon: "https://game.logistics-empire.com/assets/res_indigo_clothes-JQr_V6yn.avif", onClick: window.openKleidungMenu, tooltip: "Kleidung" },
+        { id: "headLagerM", icon: "https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif", onClick: window.openLagerMenu, tooltip: "Lager" },
     
     ]);
    

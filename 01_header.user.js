@@ -56,8 +56,8 @@
         btn.style.flexDirection = "column";
         btn.style.justifyContent = "center";
         btn.style.alignItems = "center";
-        btn.style.height = "56px";
-        btn.style.minWidth = "56px";
+        btn.style.height = "45px";
+        btn.style.minWidth = "45px";
         btn.style.padding = "4px 2px";
         
         // TOOLTIP AKTIVIEREN (Das Attribut, das das Spiel ausliest)
@@ -129,8 +129,8 @@
         btn.style.display = "inline-flex";
         btn.style.justifyContent = "center";
         btn.style.alignItems = "center";
-        btn.style.width = "64px";
-        btn.style.height = "64px";
+        btn.style.width = "45px";
+        btn.style.height = "45px";
         btn.style.padding = "0";
         btn.style.marginRight = "16px"; // Etwas Abstand
 
