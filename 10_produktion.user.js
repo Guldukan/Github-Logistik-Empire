@@ -23,7 +23,7 @@
             window.insertButtonInSearchDiv("btnMuehle", "https://game.logistics-empire.com/assets/icon_bld_mill-DaJO0L1l.avif", () => window.applyBuildingFilter("Mühle"), "Mühle");
             window.insertButtonInSearchDiv("btnBaeckerei", "https://game.logistics-empire.com/assets/res_bread-CuVynabW.avif", () => window.applyBuildingFilter("Bäckerei"), "Bäckerei");
             window.insertButtonInSearchDiv("btnSnack", "https://game.logistics-empire.com/assets/res_potato_chips-C4SYE08S.avif", () => window.applyBuildingFilter("Snackmanufaktur"), "Snack");
-            window.insertButtonInSearchDiv("btnPommes", "https://game.logistics-empire.com/assets/res_fries-By8mac-R.avif", () => window.applyBuildingFilter("Pommesmanufaktur"), "Pommesmanufaktur");
+            window.insertButtonInSearchDiv("btnPommes", "https://game.logistics-empire.com/assets/res_fries-By8mac-R.avif", () => window.applyBuildingFilter("Pommesmanufaktur"), "Pommes");
     };
 
     window.openFleischMenu = function () {
