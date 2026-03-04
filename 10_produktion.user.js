@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         10_produktion
 // @namespace    Konfiguration
-// @version      1.2
+// @version      1.1
 // @author       Peter&Gemini
 // @match        https://game.logistics-empire.com/*
 // @grant        none
