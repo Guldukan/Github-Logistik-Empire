@@ -5,7 +5,8 @@
 // @description  Erstellt Test-Buttons im Header
 // @author       Peter&Gemini
 // @match        https://game.logistics-empire.com/*
-// @grant        none
+// @resource     iconArbeitsplatz https://raw.githubusercontent.com/Guldukan/Github-Logistik-Empire/refs/heads/main/ico/arbeitzplatz.ico?token=GHSAT0AAAAAADVKU7U5MGPMZYVZQW57T6EW2NIUEYQ
+// @grant        GM_getResourceURL
 // ==/UserScript==
 
 (function() {
@@ -63,7 +64,7 @@
         }
 
         // Die beiden Buttons mit der neuen Funktion erstellen
-        const activateButton = createNativeHeaderButton('pg-activate-button', 'https://game.logistics-empire.com/assets/icon_bld_meat_factory-DeFS9SW1.avif', 'Aktivieren');
+        const activateButton = createNativeHeaderButton('pg-activate-button', GM_getResourceURL('iconArbeitsplatz'), 'Aktivieren');
         const newButton = createNativeHeaderButton('pg-new-button', 'https://game.logistics-empire.com/assets/res_tomatoes-DB5E8JLB.avif', 'Neuer Button');
 
         // Beide Buttons zum Container hinzufügen
