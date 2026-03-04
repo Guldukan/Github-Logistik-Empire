@@ -73,20 +73,7 @@
 
         btn.appendChild(img);
 
-        // Text-Label: Entweder explizit übergeben oder Fallback auf Tooltip (Konsistenz zur 2. Reihe)
-        const labelText = text || tooltipText;
-
-        if (labelText) {
-            const textSpan = document.createElement("span");
-            textSpan.textContent = labelText;
-            textSpan.style.fontSize = "10px";
-            textSpan.style.lineHeight = "1.2";
-            textSpan.style.marginTop = "3px";
-            textSpan.style.pointerEvents = "none";
-            btn.appendChild(textSpan);
-        }
-
-        if (onClick) btn.addEventListener("click", onClick);
+         if (onClick) btn.addEventListener("click", onClick);
         topRight.appendChild(btn);
 
         if (window.sortHeaderButtons) window.sortHeaderButtons();
