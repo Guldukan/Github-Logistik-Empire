@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         00_PGLibrary
-// @namespace    PeterGemi
+// @name         02_header
+// @namespace    Header
 // @version      2.0.0
 // @description  Zentrale Funktions-Bibliothek für alle P&G Skripte. Muss vor allen anderen P&G Skripten laufen.
 // @author       Peter&Gemi
