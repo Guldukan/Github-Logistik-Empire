@@ -212,17 +212,6 @@
 
                 btn.appendChild(img);
 
-                // Wir nutzen den Tooltip-Text auch als sichtbare Beschriftung
-                if (tooltipText) {
-                    const textSpan = document.createElement("span");
-                    textSpan.textContent = tooltipText;
-                    textSpan.style.fontSize = "10px";
-                    textSpan.style.lineHeight = "1.2";
-                    textSpan.style.marginTop = "3px";
-                    textSpan.style.pointerEvents = "none";
-                    btn.appendChild(textSpan);
-                }
-
                 if (onClick) btn.addEventListener("click", onClick);
                 container.appendChild(btn);
             }
