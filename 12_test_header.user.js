@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         12_Test_Header
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  Erstellt Test-Buttons im Header
 // @author       Peter&Gemini
 // @match        https://game.logistics-empire.com/*
@@ -22,63 +22,27 @@
         // 2. Fenster-Container erstellen
         const win = document.createElement('div');
         win.id = 'pg-custom-window';
-        // Inline-Styles für komplette Unabhängigkeit
-        win.style.position = 'fixed';
-        win.style.top = '19%';
-        win.style.left = '20%';
-        // win.style.transform = 'translate(-50%, -50%)'; // Entfernt, damit top/left die obere linke Ecke bestimmen
-        win.style.backgroundColor = 'rgb(30, 41, 59)'; // Dunkles Blau-Grau
-        win.style.color = 'rgb(241, 245, 249)'; // Helles Weiß-Grau
-        win.style.borderRadius = '8px';
-        win.style.boxShadow = '0 10px 25px rgba(0,0,0,0.8)'; // Kräftiger Schatten
-        win.style.zIndex = '10000'; // Ganz oben
-        win.style.minWidth = '680px';
-        win.style.border = '2px solid rgb(71, 85, 105)';
-        win.style.fontFamily = 'sans-serif';
-        // Layout für den scrollbaren Inhaltsbereich vorbereiten
-        win.style.display = 'flex';
-        win.style.flexDirection = 'column';
-        win.style.maxHeight = '80vh'; // Maximale Höhe des Fensters
-        win.style.padding = '20px';
 
         // 3. Schließen-Button (X) oben rechts
         const closeBtn = document.createElement('button');
         closeBtn.textContent = '✖';
-        closeBtn.style.position = 'absolute';
-        closeBtn.style.top = '10px';
-        closeBtn.style.right = '10px';
-        closeBtn.style.background = 'transparent';
-        closeBtn.style.border = 'none';
-        closeBtn.style.color = 'rgb(148, 163, 184)';
-        closeBtn.style.cursor = 'pointer';
-        closeBtn.style.fontSize = '18px';
+        closeBtn.className = 'pg-custom-window-close';
         closeBtn.onclick = () => win.remove();
         win.appendChild(closeBtn);
 
         // 4. Titel
         const h3 = document.createElement('h3');
         h3.textContent = title;
-        h3.style.marginTop = '0';
-        h3.style.marginBottom = '15px';
-        h3.style.borderBottom = '1px solid rgb(51, 65, 85)';
-        h3.style.paddingBottom = '10px';
         win.appendChild(h3);
 
         // 5. Container für den Inhalt, damit dieser scrollbar wird, der Header aber nicht
         const contentContainer = document.createElement('div');
         contentContainer.id = 'pg-custom-window-content';
-        contentContainer.style.overflowY = 'auto'; // Nur vertikal scrollen
-        contentContainer.style.paddingRight = '10px'; // Platz für Scrollbar, vermeidet "springen"
-        contentContainer.style.marginRight = '-10px'; // gleicht paddingRight aus
 
         // 6. Inhalt (Reihen) generieren und in den Content-Container einfügen
         rowsContent.forEach(content => {
             const row = document.createElement('div');
-            row.style.marginBottom = '10px';
-            row.style.padding = '12px';
-            row.style.backgroundColor = 'rgb(15, 23, 42)'; // Noch dunklerer Hintergrund für die Zeilen
-            row.style.borderRadius = '6px';
-            row.style.border = '1px solid rgb(51, 65, 85)';
+            row.className = 'pg-custom-window-row';
             row.textContent = content;
             contentContainer.appendChild(row);
         });
@@ -177,8 +141,8 @@
 
     // Wir warten, bis die Hilfsfunktionen aus den anderen Skripten geladen sind.
     const checkDependencies = setInterval(() => {
-        // Warte auf die Bibliothek (01_header) und die Konfiguration (11_test_config)
-        if (window.waitForElement && window.PG_TEST_CONFIG) {
+        // Warte auf die Bibliothek (01_header), die Konfiguration (11_test_config) und das CSS (13_test_css)
+        if (window.waitForElement && window.PG_TEST_CONFIG && window.PG_TEST_CSS_LOADED) {
             clearInterval(checkDependencies);
             initButtonObserver();
         }
