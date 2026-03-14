@@ -49,7 +49,7 @@
                 { id: 'btnviehzucht',    icon: 'https://game.logistics-empire.com/assets/res_wool-Dqj3gzZa.avif',                      filter: '"Viezuchtbetrieb"', tooltip: 'Viehzuchtbetrieb' }
                 ],
             zwischenprodukte: [
-                { id: 'btnmuehle',       icon: 'https://game.logistics-empire.com/assets/res_flour-DgvZyVE5.avif',                      filter: '"Mühle"',           tooltip: 'Mühle' },
+                { id: 'btnmuehle',       icon: 'https://raw.githubusercontent.com/Guldukan/Github-Logistik-Empire/refs/heads/main/ico/Gemini_Generated_Image_xskruuxskruuxskr.ico',                      filter: '"Mühle"',           tooltip: 'Mühle' },
                 { id: 'btnfleischfabri', icon: 'https://game.logistics-empire.com/assets/icon_bld_meat_factory-DeFS9SW1.avif',          filter: '"Fleischfabrik"',   tooltip: 'Fleisch' },
                 { id: 'btnspinnerei',    icon: 'https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif', filter: '"Spinnerei"',       tooltip: 'Spinnerei' },
                 { id: 'btnweberei',      icon: 'https://game.logistics-empire.com/assets/icon_bld_warehouse_dry_textile-CO0nTVe8.avif', filter: '"Weberei"',         tooltip: 'Weberei' }
