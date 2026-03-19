@@ -11,6 +11,16 @@
 (function() {
     'use strict';
 
+    // Zustand für die Sichtbarkeit der Header-Buttons. Startet mit "ausgeblendet".
+    let headerButtonsVisible = false;
+
+    function setHeaderButtonsVisibility(visible) {
+        document.querySelectorAll('.pb-header-btn').forEach(btn => {
+            btn.style.display = visible ? 'inline-flex' : 'none';
+        });
+        headerButtonsVisible = visible;
+    }
+
     function createNavSection(id, configs) {
         const customWrapper = document.createElement('div');
         customWrapper.id = id;
@@ -32,7 +42,7 @@
                 element.draggable = false;
             }
             
-            element.onclick = () => console.log(`${config.id} geklickt`);
+            element.onclick = config.onClick ? config.onClick : () => console.log(`${config.id} geklickt`);
             btnContainer.appendChild(element);
             
             const divider = document.createElement('div');
@@ -52,7 +62,14 @@
         if (leftNav && !document.getElementById('custom-nav-left')) {
             const leftConfigs = [
                 { id: 'B1', src: '', isPlaceholder: true },
-                { id: 'B2', src: '', isPlaceholder: true },
+                { 
+                    id: 'B2', 
+                    src: 'https://game.logistics-empire.com/assets/shop_ctg_food_processing-DPmu_XnS.avif', 
+                    isPlaceholder: false,
+                    onClick: () => {
+                        setHeaderButtonsVisibility(!headerButtonsVisible);
+                    }
+                },
                 { id: 'B3', src: 'https://game.logistics-empire.com/assets/truck_break_bulk_small_huge-BlAVkJv8.avif', isPlaceholder: false }
             ];
             leftNav.before(createNavSection('custom-nav-left', leftConfigs));
@@ -74,7 +91,14 @@
         }
     }
 
-    const observer = new MutationObserver(() => injectButtons());
+    const observer = new MutationObserver(() => {
+        injectButtons();
+        // Stellt sicher, dass der Zustand (sichtbar/unsichtbar) auch nach DOM-Änderungen beibehalten wird.
+        setHeaderButtonsVisibility(headerButtonsVisible);
+    });
     observer.observe(document.body, { childList: true, subtree: true });
+
+    // Führt die Funktionen einmal initial aus.
     injectButtons();
+    setHeaderButtonsVisibility(false); // Stellt sicher, dass die Leiste am Anfang ausgeblendet ist.
 })();
