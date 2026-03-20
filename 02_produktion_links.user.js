@@ -11,6 +11,8 @@
 (function() {
     'use strict';
 
+    let activeMenu = null;
+
     // Wartet, bis die Bibliothek und die Konfiguration geladen sind.
     function waitForDependencies(callback) {
         const interval = setInterval(() => {
@@ -28,7 +30,14 @@ window.openSubMenu = function(menuName) {
         return;
     }
 
+    if (activeMenu === menuName) {
+        window.clearSearchDivButtons();
+        activeMenu = null;
+        return;
+    }
+
     window.clearSearchDivButtons();
+    activeMenu = menuName;
     const menuButtons = window.PETER_GEMINI_CONFIG.menus[menuName];
 
 // In der 10_produktion die Schleife anpassen:

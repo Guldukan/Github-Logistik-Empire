@@ -61,7 +61,15 @@
         
         if (leftNav && !document.getElementById('custom-nav-left')) {
             const leftConfigs = [
-                { id: 'B1', src: '', isPlaceholder: true },
+                { 
+                    id: 'B1', 
+                    src: 'https://game.logistics-empire.com/assets/shop_ctg_textiles-BCF4KR7y.avif', 
+                    isPlaceholder: false,
+                    onClick: () => {
+                        // Gleiche Funktion wie B2: Schaltet die Leiste oben um
+                        setHeaderButtonsVisibility(!headerButtonsVisible);
+                    }
+                },
                 { 
                     id: 'B2', 
                     src: 'https://game.logistics-empire.com/assets/shop_ctg_food_processing-DPmu_XnS.avif', 
@@ -70,7 +78,18 @@
                         setHeaderButtonsVisibility(!headerButtonsVisible);
                     }
                 },
-                { id: 'B3', src: 'https://game.logistics-empire.com/assets/truck_break_bulk_small_huge-BlAVkJv8.avif', isPlaceholder: false }
+                { 
+                    id: 'B3', 
+                    src: 'https://game.logistics-empire.com/assets/truck_break_bulk_small_huge-BlAVkJv8.avif',
+                    isPlaceholder: false,
+                    onClick: () => {
+                        if (window.openContentPanel && window.showOrdersOverlay) {
+                            window.openContentPanel("Aufträge Trade-Center", window.showOrdersOverlay);
+                        } else {
+                            console.log("P&G: Funktionen noch nicht geladen.");
+                        }
+                    }
+                }
             ];
             leftNav.before(createNavSection('custom-nav-left', leftConfigs));
         }
